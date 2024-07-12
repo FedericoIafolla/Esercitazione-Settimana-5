@@ -1,0 +1,332 @@
+/* Reset dei margini e dei padding per il body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile del header principale */
+.main-header {
+    background-color: #FFC017;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Stile della barra di navigazione */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Per posizionare correttamente la linea */
+    padding: 20px 10%; /* Padding laterale del 10% */
+}
+
+/* Stili per il lato sinistro della navbar (logo) */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px; /* Dimensioni del tuo logo SVG */
+    height: auto;
+    margin-right: 20px; /* Spazio tra il logo e i link */
+}
+
+/* Stili per il lato destro della navbar (link e bottone) */
+.navbar-right ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right ul li {
+    margin-right: 20px;
+}
+
+.navbar-right ul li:last-child {
+    margin-right: 0;
+}
+
+.navbar-right ul li a {
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+    color: inherit; /* Assicura che il colore del testo sia preso dal tema generale */
+}
+
+.navbar-right button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* Linea nera sotto la navbar */
+.navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Larghezza al 100% del viewport */
+    height: 1px;
+    background-color: black;
+}
+
+/* Stili per il contenuto del header */
+.header-content {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.header-content-left {
+    width: 60%;
+    text-align: left;
+}
+
+.header-content-right {
+    width: 40%;
+    text-align: left;
+    padding-left: 20px; /* Aggiunge un po' di spazio tra il contenuto sinistro e quello destro */
+}
+
+.header-content h1 {
+    font-size: 5em;
+    margin-bottom: 50px;
+}
+
+.header-content p {
+    font-size: 1.5em;
+    margin-bottom: 80px;
+}
+
+.header-content-right p {
+    font-size: 1.2em;
+    margin-top: 40px; /* Aggiunge spazio sopra il testo "CIAO" */
+}
+
+.header-content button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 3em;
+}
+
+/* Linea nera sotto il div header */
+.header-divider {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+/* Stili per il div trending */
+.trending {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center; /* Centrare il testo */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.trending img {
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.trending p {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Stili per il div trending-blocks */
+.trending-blocks {
+    width: 80%; /* Larghezza del 80% */
+    margin: 0 auto; /* Centrare il div */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 20px; /* Spazio tra i blocchi di testo e la riga grigia */
+    position: relative; /* Per posizionare correttamente la pseudo-classe ::after */
+}
+
+
+.content-block {
+    position: relative; /* Rende il blocco relativo per posizionare correttamente gli elementi figli */
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row; /* Disponi gli elementi figli in riga */
+    align-items: flex-start; /* Allinea gli elementi figli in alto */
+}
+
+.content-block-left {
+    width: 20%;
+    font-size: 2em;
+    color: #c7c7c7;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start; /* Allinea il contenuto all'inizio del blocco */
+    align-items: flex-start;
+    margin: 0; /* Rimuove eventuali margini */
+    padding: 0; /* Rimuove eventuali padding */
+}
+
+
+.content-block-right {
+    width: 80%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column; /* Disponi gli elementi figli in colonna */
+    align-items: flex-start; /* Allinea gli elementi figli in alto */
+}
+
+.block-icon {
+    display: flex;
+    align-items: center;
+}
+
+.block-icon-img1 {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; /* Rende l'icona tonda */
+    margin-bottom: 10px;
+}
+
+.block-icon-img2 {
+    width: 25px;
+    height: 25px;
+    border-radius: 25%; /* Rende l'icona tonda */
+    margin-bottom: 10px;
+}
+
+.block-icon-text {
+    font-size: 0.8em;
+    margin-left: 5px; /* Aggiunge un po' di spazio tra l'icona e il testo */
+    padding-bottom: 5px;
+}
+
+.content-block-right .block-icon-text {
+    font-size: 0.8em;
+    margin-left: 5px;
+    font-weight: bold; /* Rende il nome in grassetto */
+}
+
+.block-title {
+    font-size: 1.1em;
+    font-weight: bold; /* Rende il titolo in grassetto */
+    margin-bottom: 15px; /* Aggiunge spazio inferiore */
+}
+
+.block-description {
+    color: #808080; /* Imposta il colore grigio */
+    font-size: 0.9em; /* Riduce la dimensione del font */
+    font-weight: normal; /* Rimuove il grassetto */
+}
+
+.trending-blocks-divider {
+    width: 100%; /* Larghezza al 100% del viewport */
+    height: 1px;
+    background-color: rgb(200, 200, 200);
+    margin-top: 20px; /* Spazio sopra la riga */
+}
+
+.article-left {
+    width: 60%;
+    padding-left: 200px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Sfondo bianco come negli altri blocchi */
+}
+
+.text-block {
+    margin-bottom: 20px; /* Spazio tra i blocchi di testo */
+    display: flex; /* Usa Flexbox per allineare contenuti */
+    align-items: center; /* Allinea verticalmente i contenuti */
+}
+
+.text-block h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-block p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.text-block img {
+    max-width: 100px; /* Larghezza massima dell'immagine */
+    max-height: 100px; /* Altezza massima dell'immagine */
+    margin-left: auto; /* Spinge l'immagine completamente a destra */
+    margin-right: 20px; /* Aggiunge spazio a destra dell'immagine */
+    flex-shrink: 0; /* Impedisce il ridimensionamento dell'immagine */
+}
+
+.block-icon {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.block-icon img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.block-icon .block-icon-img2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 25%;
+    margin-right: 5px;
+}
+
+.block-icon-text {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 5px; 
+}
+
+.block-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.block-description-gray {
+    font-size: 0.9em;
+    color: #808080;
+}
+
+.block-date {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Assicura che la navbar sia sopra gli altri contenuti */
+    background-color: #ffffff; /* Cambia il colore di sfondo della navbar sticky se necessario */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra sottile per migliorare la visibilità */
+}
